@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Règlement — BACKNEW</title>
+    <link rel="icon"
+        href="https://cdn.discordapp.com/attachments/1554599434606612652/1558598036719141004/logo-hd.png?ex=6acc0509&is=6acab389&hm=5237a7d26c8853ce33b4f9204fd72bd8c92bdfd11eed56ea64baaacff8f83a0b&"
+        type="image/png">
+    <meta name="description"
+        content="Le règlement officiel du serveur BACKNEW. Règlement HRP, RP légal, RP illégal, guide et plus encore.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Archivo:wght@400;500;600;700;800;900&display=swap">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Script anti-flash du thème (doit rester inline et dans le <head>) -->
+    <script>
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'dark');
+        }
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.classList.add('light');
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================================
+     HEADER
+     ============================================================ -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </button>
+                <a href="#" class="header-logo" data-page="home">
+                    <img src="logo.png" alt="Logo BACKNEW" class="logo-img" onerror="this.style.display='none'">
+                    <span>BACKNEW</span>
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="#" class="header-link" data-page="guide-debutant">Guide débutant</a>
+                <a href="#" class="header-link" data-page="guide-connect">Se Connecter</a>
+                <a href="#" class="header-link" data-page="boutique">Boutique</a>
+                <a href="https://discord.gg/backnewrp" target="_blank" rel="noreferrer"
+                    class="header-link discord">Discord</a>
+                <button class="theme-btn" id="themeToggle" aria-label="Basculer le thème">
+                    <svg class="svg-icon icon-sun" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    </svg>
+                    <svg class="svg-icon icon-moon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ============================================================
+     PAGE WRAPPER
+     ============================================================ -->
+    <div class="page-wrapper">
+
+        <!-- ============================================================
+         SIDEBAR
+         ============================================================ -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-group">
+                <div class="sidebar-group-title">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <path d="M3 21h18M5 21V7l7-5 7 5v14M9 21v-6h6v6" />
+                    </svg>
+                    Règlement BACKNEW
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link active" data-page="home">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                        Accueil
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="guide-debutant">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        Guide du débutant
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="reglement-hrp">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                        Règlement HRP
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="reglement-global">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <line x1="3" y1="9" x2="21" y2="9" />
+                            <line x1="9" y1="21" x2="9" y2="9" />
+                        </svg>
+                        Règlement Global
+                    </a>
+                </div>
+
+                <div class="sidebar-item" data-group="legal">
+                    <button class="sidebar-link" data-toggle="legal">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Règlement RP Légal
+                        <svg class="svg-icon chevron" viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                    </button>
+                    <div class="sidebar-submenu">
+                        <a href="#" class="sidebar-sublink" data-page="reglement-legal">
+                            <span class="emoji-icon">📜</span>
+                            Présentation
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="legal-lspd">
+                            <span class="emoji-icon">👮‍♂️</span>
+                            Règlement LSPD/BCSO
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="legal-forces">
+                            <span class="emoji-icon">🚓</span>
+                            Forces de l'ordre
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="legal-defcon">
+                            <span class="emoji-icon">🚨</span>
+                            Defcon
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="legal-ems">
+                            <span class="emoji-icon">🚑</span>
+                            Règlement EMS
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="legal-entreprise">
+                            <span class="emoji-icon">🏛️</span>
+                            Règlement Entreprise
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="legal-activites">
+                            <span class="emoji-icon">🎣</span>
+                            Activités Légales
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sidebar-item" data-group="illegal">
+                    <button class="sidebar-link" data-toggle="illegal">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M12 2l10 6v8l-10 6-10-6V8z" />
+                            <path d="M12 22V12" />
+                            <path d="M2 8l10 4 10-4" />
+                        </svg>
+                        Règlement RP Illégal
+                        <svg class="svg-icon chevron" viewBox="0 0 24 24">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                    </button>
+                    <div class="sidebar-submenu">
+                        <a href="#" class="sidebar-sublink" data-page="reglement-illegal">
+                            <span class="emoji-icon">📜</span>
+                            Présentation
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="illegal-drogues">
+                            <span class="emoji-icon">💊</span>
+                            Drogues
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="illegal-pacific">
+                            <span class="emoji-icon">💵</span>
+                            Braquage Pacific
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="illegal-bijouterie">
+                            <span class="emoji-icon">💎</span>
+                            Braquage Bijouterie
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="illegal-superette">
+                            <span class="emoji-icon">🛒</span>
+                            Braquages supérette
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="illegal-carjack">
+                            <span class="emoji-icon">🚙</span>
+                            Carjack
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="illegal-fourgon">
+                            <span class="emoji-icon">🚚</span>
+                            Braquage Fourgon
+                        </a>
+                        <a href="#" class="sidebar-sublink" data-page="illegal-cambriolage">
+                            <span class="emoji-icon">🏠</span>
+                            Cambriolage
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <div class="sidebar-group-title">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                    </svg>
+                    Guide BACKNEW
+                </div>
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="guide-connect">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                            <circle cx="12" cy="20" r="1" />
+                        </svg>
+                        Se Connecter
+                    </a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="boutique">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        Boutique
+                    </a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="guide">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                        Guide en jeu
+                    </a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="restaurants">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                            <line x1="7" y1="2" x2="7" y2="11" />
+                            <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7" />
+                        </svg>
+                        Restaurants
+                    </a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="bugs">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        Soucis / Bugs
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <div class="sidebar-group-title">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="23 4 23 10 17 10" />
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                    </svg>
+                    Changelog / Update
+                </div>
+                <div class="sidebar-item">
+                    <a href="#" class="sidebar-link" data-page="changelog">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <polyline points="23 4 23 10 17 10" />
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                        </svg>
+                        Changelog
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ============================================================
+         MAIN CONTENT
+         ============================================================ -->
+        <main class="main-content">
+
+            <!-- ============================================================
+             PAGE: ACCUEIL
+             ============================================================ -->
+            <div class="page-section active" id="page-home">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Accueil</span>
+                </div>
+
+                <div class="content">
+                    <h1>Bienvenue sur BACKNEW</h1>
+                    <p>Retrouvez ci-dessous l'ensemble du règlement du serveur. Cliquez sur une carte pour accéder à
+                        la section correspondante.</p>
+
+                    <div class="card-grid">
+                        <!-- Guide du débutant -->
+                        <a href="#" class="card" data-page="guide-debutant">
+                            <div class="card-cover-wrap">
+                                <img src="GuideDébutant.png" alt="Guide du débutant" class="card-cover"
+                                    onerror="this.style.display='none'">
+                                <div class="card-cover-overlay"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <svg class="svg-icon" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    Guide du débutant
+                                </h3>
+                            </div>
+                        </a>
+
+                        <!-- Règlement HRP -->
+                        <a href="#" class="card" data-page="reglement-hrp">
+                            <div class="card-cover-wrap">
+                                <img src="RèglementHRP.png" alt="Règlement HRP" class="card-cover"
+                                    onerror="this.style.display='none'">
+                                <div class="card-cover-overlay"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <svg class="svg-icon" viewBox="0 0 24 24">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                    </svg>
+                                    Règlement HRP
+                                </h3>
+                            </div>
+                        </a>
+
+                        <!-- Règlement Global -->
+                        <a href="#" class="card" data-page="reglement-global">
+                            <div class="card-cover-wrap">
+                                <img src="RèglementGlobal.png" alt="Règlement Global" class="card-cover"
+                                    onerror="this.style.display='none'">
+                                <div class="card-cover-overlay"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <svg class="svg-icon" viewBox="0 0 24 24">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                                        <line x1="3" y1="9" x2="21" y2="9" />
+                                        <line x1="9" y1="21" x2="9" y2="9" />
+                                    </svg>
+                                    Règlement Global
+                                </h3>
+                            </div>
+                        </a>
+
+                        <!-- Règlement RP Légal -->
+                        <a href="#" class="card" data-page="reglement-legal">
+                            <div class="card-cover-wrap">
+                                <img src="RèglementLégal.png" alt="Règlement RP Légal" class="card-cover"
+                                    onerror="this.style.display='none'">
+                                <div class="card-cover-overlay"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <svg class="svg-icon" viewBox="0 0 24 24">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                    Règlement RP Légal
+                                </h3>
+                            </div>
+                        </a>
+
+                        <!-- Règlement RP Illégal -->
+                        <a href="#" class="card" data-page="reglement-illegal">
+                            <div class="card-cover-wrap">
+                                <img src="RèglementIllégal.png" alt="Règlement RP Illégal" class="card-cover"
+                                    onerror="this.style.display='none'">
+                                <div class="card-cover-overlay"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <svg class="svg-icon" viewBox="0 0 24 24">
+                                        <path d="M12 2l10 6v8l-10 6-10-6V8z" />
+                                        <path d="M12 22V12" />
+                                        <path d="M2 8l10 4 10-4" />
+                                    </svg>
+                                    Règlement RP Illégal
+                                </h3>
+                            </div>
+                        </a>
+
+                        <!-- Guide BACKNEW -->
+                        <a href="#" class="card" data-page="guide">
+                            <div class="card-cover-wrap">
+                                <img src="GuideBACKNEW.png" alt="Guide BACKNEW" class="card-cover"
+                                    onerror="this.style.display='none'">
+                                <div class="card-cover-overlay"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <svg class="svg-icon" viewBox="0 0 24 24">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                    </svg>
+                                    Guide BACKNEW
+                                </h3>
+                            </div>
+                        </a>
+
+                        <!-- Boutique -->
+                        <a href="#" class="card" data-page="boutique">
+                            <div class="card-cover-wrap">
+                                <img src="BoutiqueBACKNEW.png" alt="Boutique" class="card-cover"
+                                    onerror="this.style.display='none'">
+                                <div class="card-cover-overlay"></div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <svg class="svg-icon" viewBox="0 0 24 24">
+                                        <circle cx="9" cy="21" r="1" />
+                                        <circle cx="20" cy="21" r="1" />
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                                    </svg>
+                                    Boutique
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: GUIDE DU DÉBUTANT
+             ============================================================ -->
+            <div class="page-section" id="page-guide-debutant">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Guide du débutant RP</span>
+                </div>
+                <div class="content">
+                    <div class="welcome-hero">
+                        <h1> Bienvenue sur BackNew ! </h1>
+                        <p>Si tu viens tout juste d'arriver sur le serveur, voici quelques règles essentielles et étapes
+                            clés pour bien démarrer ton expérience en Roleplay.</p>
+                        <p style="margin-top: 16px;">
+                            <a href="https://discord.gg/backnewrp" target="_blank" rel="noreferrer"
+                                class="header-link discord" style="display:inline-flex;">🗣️ Discord</a>
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>📖 1. Lis attentivement le règlement</h3>
+                        <p>Avant toute chose, prends le temps de lire entièrement le règlement du serveur. Ne pas le
+                            connaître n'est pas une excuse en cas d'infraction. Cela t'évitera des sanctions inutiles et
+                            t'aidera à mieux comprendre les limites du RP autorisé ici.</p>
+                        <p><a href="#" data-page="reglement-hrp">📘 Wiki BackNew</a></p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>🗣️ 2. Apprends le lexique RP</h3>
+                        <p>Tu dois absolument connaître le vocabulaire RP de base :</p>
+                        <ul>
+                            <li>Parle en personnage (IG) et évite absolument de parler HRP (hors rôle) en jeu.</li>
+                            <li>Si tu dois dire quelque chose pour décrire une action RP, utilise les commandes prévues
+                                (ex: /me).</li>
+                            <li>Tu peux aussi faire un report via la commande <code>/report "ton message"</code> pour
+                                qu'un staff te prenne en charge.</li>
+                        </ul>
+                        <p><a href="#" data-page="guide">📚 Lexique RP</a></p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>👤 3. Choisis un nom RP cohérent</h3>
+                        <p>Tu dois créer un nom et prénom réalistes, pas de pseudo farfelu ou nom de célébrité. Sois
+                            créatif mais reste crédible : ton nom est ta première identité RP.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>🔫 4. Tu peux être braqué à tout moment</h3>
+                        <p>Sur BackNew, les interactions illégales font partie du jeu.</p>
+                        <ul>
+                            <li>Tu peux te faire braquer par n'importe qui, n'importe où, tant que c'est fait dans les
+                                règles du RP.</li>
+                            <li>Dans ce cas, joue la peur : lève les mains avec la touche <strong>X</strong> et coopère.
+                            </li>
+                            <li><strong>Attention :</strong> si tu n'as pas de masque, le braqueur n'a pas le droit de
+                                te looter (te voler tes affaires).</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>🛒 5. Les premières choses à faire</h3>
+                        <p>Voici un petit guide des étapes à suivre dès ton arrivée :</p>
+                        <ul>
+                            <li>🧾 Va acheter un téléphone au magasin LTD – il te permettra de communiquer et recevoir
+                                des infos.</li>
+                            <li>🪪 Va chercher ta carte d'identité au commissariat de police – obligatoire pour toutes
+                                démarches officielles.</li>
+                            <li>🚗 Passe ton permis de conduire à l'auto-école – nécessaire pour conduire légalement.
+                            </li>
+                        </ul>
+                        <p>
+                            <a href="#" class="badge badge-allowed">💳 Carte d'identité</a>
+                            <a href="#" class="badge badge-allowed">🗃️ Permis de conduire</a>
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3>💼 6. Trouve ta voie : légal ou illégal ?</h3>
+                        <p>Une fois ton permis en poche, tu as deux options :</p>
+                        <ul>
+                            <li>💼 Commencer un travail légal (mécanicien, mineur, ambulancier, etc.).</li>
+                            <li>🕵️‍♂️ Chercher à te faire recruter dans une organisation illégale (gang, mafia, petite
+                                frappe, etc.) – attention, cela demande un bon RP.</li>
+                        </ul>
+                        <p>
+                            <a href="#" data-page="legal-activites">⁉️ Trouver un emploi</a>
+                            &nbsp;•&nbsp;
+                            <a href="#" data-page="reglement-illegal">Règlement RP Illégal</a>
+                        </p>
+                    </div>
+
+                    <div class="callout success">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <div>
+                            <p><strong>🤝 En résumé</strong></p>
+                            <ul style="margin-bottom:0;">
+                                <li>✅ Respecte les règles</li>
+                                <li>✅ Reste toujours en personnage</li>
+                                <li>✅ Joue tes émotions comme dans un vrai film ou série</li>
+                                <li>✅ Et surtout : amuse-toi tout en respectant les autres joueurs !</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p style="text-align:center; margin-top: 32px; font-size: 16px;">
+                        BackNew, c'est ce que vous en faites. Le RP commence dès votre arrivée : soyez sérieux,
+                        impliqués, et votre expérience sera inoubliable.
+                    </p>
+                    <p style="text-align:center; font-weight:700; color: var(--pr); font-size: 18px;">Bon jeu à tous !
+                        🎮</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="home">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Accueil</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="reglement-hrp">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Règlement HRP →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: RÈGLEMENT HRP
+             ============================================================ -->
+            <div class="page-section" id="page-reglement-hrp">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Règlement HRP</span>
+                </div>
+                <div class="content">
+                    <h1>Règlement HRP</h1>
+                    <p>Le règlement HRP (Hors RolePlay) définit les règles qui s'appliquent en dehors du jeu.</p>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>1. Comportement général</h2>
+                    <p>Le respect est la base de toute communauté saine :</p>
+                    <ul>
+                        <li>Respecter tous les joueurs, peu importe leur niveau, origine ou rôle.</li>
+                        <li>Ne pas tenir de propos discriminatoires, racistes, sexistes ou homophobes.</li>
+                        <li>Ne pas harceler, menacer ou intimider un autre joueur.</li>
+                        <li>Ne pas divulguer d'informations personnelles (doxxing).</li>
+                    </ul>
+
+                    <div class="callout warning">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        <p><strong>Important :</strong> Tout manquement grave au respect peut entraîner un bannissement
+                            définitif.</p>
+                    </div>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>2. Communication</h2>
+                    <ul>
+                        <li>Utilisez un langage approprié sur les canaux vocaux et textuels.</li>
+                        <li>Évitez le spam, les majuscules excessives et les messages répétitifs.</li>
+                        <li>Ne partagez pas de contenu illégal, violent ou pornographique.</li>
+                        <li>Les publicités pour d'autres serveurs sont interdites sans autorisation.</li>
+                    </ul>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>3. Triche et exploitation</h2>
+                    <ul>
+                        <li>Aucun logiciel de triche, mod menu ou injection ne sera toléré.</li>
+                        <li>L'exploitation de bugs pour obtenir un avantage est passible de sanctions.</li>
+                        <li>Le partage de méthodes de triche entraîne également des sanctions.</li>
+                    </ul>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>4. Sanctions</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Infraction</th>
+                                <th>Sanction</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Manque de respect léger</td>
+                                <td>Avertissement</td>
+                            </tr>
+                            <tr>
+                                <td>Manque de respect répété</td>
+                                <td>Mute temporaire (1h - 24h)</td>
+                            </tr>
+                            <tr>
+                                <td>Harcèlement</td>
+                                <td>Bannissement temporaire (7 - 30 jours)</td>
+                            </tr>
+                            <tr>
+                                <td>Triche</td>
+                                <td>Bannissement définitif</td>
+                            </tr>
+                            <tr>
+                                <td>Doxxing</td>
+                                <td>Bannissement définitif + signalement</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="guide-debutant">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Guide débutant</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="reglement-global">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Règlement Global →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: RÈGLEMENT GLOBAL
+             ============================================================ -->
+            <div class="page-section" id="page-reglement-global">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Règlement Global</span>
+                </div>
+                <div class="content">
+                    <h1>Règlement Global</h1>
+                    <p>Le règlement global s'applique à l'ensemble du serveur et de ses services.</p>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>1. Notions de base RP</h2>
+
+                    <h3>1.1 Le Metagaming</h3>
+                    <p>Utiliser des informations obtenues hors RP pour agir en jeu. Exemple : Tu regardes le stream d'un
+                        ami et tu vois qu'il se cache derrière un bâtiment. En jeu, ton personnage va directement le
+                        trouver sans l'avoir vu.</p>
+
+                    <h3>1.2 Le Powergaming</h3>
+                    <p>Forcer des actions irréalistes ou impossibles, sans laisser de choix aux autres joueurs. Exemple
+                        : Tu arrives derrière un joueur et tu écris /me lui casse le bras. Il n'a aucun moyen de réagir
+                        ou d'esquiver.</p>
+
+                    <h3>1.3 La Cohérence RP</h3>
+                    <p>Jouer son personnage de manière logique et réaliste selon son histoire et la situation. Exemple :
+                        Ton personnage est un mécanicien pacifique. Un gang armé débarque au garage : tu ne sors pas une
+                        arme pour les affronter seul, tu te caches ou tu obéis.</p>
+
+                    <h3>1.4 Le Mass RP</h3>
+                    <p>Créer une scène qui implique une foule énorme sans logique RP ou exagérée. Exemple : Tu organises
+                        un rassemblement de 40 personnes devant le commissariat juste pour "voir la police s'énerver",
+                        sans aucune raison RP.</p>
+
+                    <h3>1.5 Le Freekill / Free Punch</h3>
+                    <p>Tuer ou frapper un joueur sans raison RP valable. Exemple : Tu sors de ton véhicule et tu frappes
+                        un passant qui marche tranquillement, sans aucun contexte ni interaction préalable.</p>
+
+                    <h3>1.6 Le Carkill</h3>
+                    <p>Utiliser un véhicule comme arme de manière irréaliste. Exemple : Tu vois un joueur à pied, tu
+                        fais demi-tour et tu accélères volontairement pour le renverser et le tuer.</p>
+
+                    <h3>1.7 Le Copbait</h3>
+                    <p>Provoquer la police volontairement sans raison RP. Exemple : Tu roules en plein milieu de la
+                        route devant une voiture de police, tu fais des drifts et tu klaxonnes pour qu'ils te
+                        poursuivent.</p>
+
+                    <h3>1.8 Le Gangbait</h3>
+                    <p>Provoquer un gang sans raison RP. Exemple : Tu passes devant le repaire d'un gang et tu leur
+                        cries "vous êtes des lâches" juste pour déclencher une fusillade.</p>
+
+                    <h3>1.9 Le Fear RP</h3>
+                    <p>Jouer la peur de son personnage face au danger. Exemple : Un joueur te braque avec un pistolet.
+                        Tu dois lever les mains, trembler, obéir, et ne pas sortir ton arme pour riposter.</p>
+
+                    <h3>1.10 Le Douleur RP (Pain RP)</h3>
+                    <p>Jouer la douleur de son personnage quand il est blessé. Exemple : Tu prends une balle dans la
+                        jambe. Tu boites, tu gémis, tu rampes si nécessaire, au lieu de courir normalement.</p>
+
+                    <h3>1.11 Le Refus de scène</h3>
+                    <p>Quitter ou interrompre une scène RP volontairement. Exemple : Tu es en plein braquage, la police
+                        arrive, et tu déconnectes du serveur pour éviter d'être arrêté.</p>
+
+                    <h3>1.12 Le Chicken Run / Spam emote</h3>
+                    <p>Abuser des mécaniques pour éviter un danger. Exemple : Sous le feu ennemi, tu cours en zigzag
+                        sans arrêt ou tu spammes l'emote "se baisser" pour esquiver les balles.</p>
+
+                    <h3>1.13 Le Revenge Kill</h3>
+                    <p>Revenir tuer la personne qui vous a tué après votre "mort RP". Exemple : Ton personnage se fait
+                        tuer par un rival. Tu réapparais à l'hôpital et tu retournes directement le tuer, alors que ton
+                        personnage ne devrait pas se souvenir de la scène.</p>
+
+                    <h3>1.14 L'Imaginaire RP</h3>
+                    <p>Inventer des faits ou objets inexistants en RP. Exemple : Tu dis en /me "je sors une arme de mon
+                        sac" alors que ton personnage n'a aucune arme dans son inventaire.</p>
+
+                    <h3>1.15 Le Hide Bush (Se cacher dans un buisson)</h3>
+                    <p>Abuser des textures pour être invisible dans un buisson. Exemple : Tu te glisses dans un buisson
+                        où ton skin disparaît complètement, et tu tires sur les passants sans qu'ils puissent te voir.
+                    </p>
+
+                    <h3>1.16 L'Off-road</h3>
+                    <p>Utiliser un véhicule inadapté en tout-terrain. Exemple : Tu montes une pente rocheuse à 45° avec
+                        une Lamborghini comme si c'était un 4x4.</p>
+
+                    <h3>1.17 Le Bunny Hop</h3>
+                    <p>Sauter en continu pour se déplacer plus vite et éviter les tirs. Exemple : Tu sautes sans arrêt
+                        en fuyant la police, ce qui te permet d'aller plus vite et de rendre les tirs plus difficiles à
+                        toucher.</p>
+
+                    <h3>1.18 L'Insinuation HRP</h3>
+                    <p>Glisser des phrases HRP en RP. Exemple : En pleine scène, tu dis "Tu sais que t'as pas le droit
+                        de faire ça, c'est marqué dans le règlement."</p>
+
+                    <h3>1.19 Le HRP Vocal</h3>
+                    <p>Parler directement HRP dans le vocal en pleine scène RP. Exemple : Pendant un braquage, tu dis
+                        "attends je lag, je reviens" dans le micro.</p>
+
+                    <h3>1.20 Le HRP (Hors RP)</h3>
+                    <p>Tout ce qui sort du jeu de rôle et casse l'immersion. Exemple : En pleine scène, tu parles de ton
+                        vrai travail IRL ou de tes notes à l'école.</p>
+
+                    <h3>1.21 Le Raccourci RP</h3>
+                    <p>Utiliser des infos ou déductions que ton personnage ne devrait pas avoir. Exemple : Tu croises un
+                        joueur habillé en rouge et tu dis directement "c'est un membre des Bloods" alors que ton
+                        personnage n'a jamais eu cette information en RP.</p>
+
+                    <div class="callout danger">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        <p><strong>Rappel :</strong> Le non-respect des notions de base du RP peut entraîner des
+                            sanctions immédiates.</p>
+                    </div>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>2. Zone Safe</h2>
+                    <p>Les zones safe sont des zones où toute action illégale ou violente est interdite. Elles sont
+                        signalées par une notification en bas à gauche de l'écran.</p>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>3. RP Animalier</h2>
+                    <ul>
+                        <li>Un animal ne peut pas parler ni utiliser d'objets humains.</li>
+                        <li>Les animaux doivent avoir un comportement réaliste.</li>
+                        <li>Il est interdit d'utiliser un animal pour commettre des crimes.</li>
+                    </ul>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>4. Services Publics</h2>
+                    <ul>
+                        <li>Ils ne peuvent pas travailler dans l'illégal sans autorisation du staff.</li>
+                        <li>Ils doivent respecter la procédure et le code de conduite de leur métier.</li>
+                        <li>Ils ne peuvent pas vendre ou donner leurs armes à des civils.</li>
+                    </ul>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="reglement-hrp">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Règlement HRP</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="reglement-legal">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Règlement RP Légal →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: RÈGLEMENT RP LÉGAL
+             ============================================================ -->
+            <div class="page-section" id="page-reglement-legal">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Règlement RP Légal</span>
+                </div>
+                <div class="content">
+                    <h1>Règlement RP Légal</h1>
+                    <p>Le règlement RP Légal encadre les activités légales du serveur : métiers, entreprises et services
+                        publics.</p>
+
+                    <div class="callout info">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>
+                        <p>Utilisez le menu latéral pour naviguer entre les sous-catégories : LSPD/BCSO, Forces de
+                            l'ordre, Defcon, EMS, Entreprise et Activités Légales.</p>
+                    </div>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="reglement-global">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Règlement Global</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="legal-lspd">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Règlement LSPD/BCSO →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: RÈGLEMENT LSPD/BCSO
+             ============================================================ -->
+            <div class="page-section" id="page-legal-lspd">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-legal">Règlement RP Légal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Règlement LSPD/BCSO</span>
+                </div>
+                <div class="content">
+                    <h1>Règlement LSPD/BCSO</h1>
+
+                    <div class="callout danger">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        <p><strong>Interdit</strong></p>
+                    </div>
+
+                    <h3>❌ Règles d'interdiction :</h3>
+                    <ul>
+                        <li>Il est interdit de revenir au poste de police (PDP) en pleine scène.</li>
+                        <li>Il est interdit de contrôler une personne sans être en service ou sans affichage clair de
+                            votre statut de policier.</li>
+                        <li>Il est interdit d'utiliser les armes de service en dehors de vos heures de service.</li>
+                        <li>La vente d'une arme LSPD/BCSO est strictement interdite, sous peine de ban permanent.</li>
+                        <li>Il est interdit de confisquer un citoyen au sol.</li>
+                        <li>Il est interdit de laisser un individu plus d'une heure en cellule, peu importe le motif
+                            (sauf si un contexte RP justifié l'exige).</li>
+                        <li>Il est interdit de passer d'un RP illégal à un RP LSPD/BCSO sans passer par un wipe.
+                            L'inverse est autorisé.</li>
+                        <li>Il est interdit d'incarner un ripou (policier corrompu) sans autorisation du staff (via
+                            ticket).
+                            <ul>
+                                <li>→ Une bavure peut exceptionnellement être tolérée (sans abus), mais le joueur devra
+                                    en assumer les conséquences RP.</li>
+                            </ul>
+                        </li>
+                        <li>Il est interdit de garder les armes saisies pour usage personnel.</li>
+                        <li>Les armes illégales sont formellement interdites pour les agents LSPD/BCSO.</li>
+                        <li>La LSPD/BCSO ne peut sortir que deux véhicules d'intervention rapide (SRU) en même temps sur
+                            la carte.</li>
+                        <li>Il est interdit de faire la distinction entre argent propre et argent sale sans
+                            justification RP.
+                            <ul>
+                                <li>→ Vous devez effectuer une vérification roleplay (ex. : appeler la banque, vérifier
+                                    via un stylo détecteur dans le véhicule ou le coffre).</li>
+                            </ul>
+                        </li>
+                        <li>L'usage de défibrillateurs pour avantager une scène est interdit.</li>
+                        <li>Il est interdit de fouiller une personne sans motif valide, selon le niveau d'alerte Defcon.
+                            <ul>
+                                <li>→ Un simple délit de fuite ne justifie pas une fouille complète, uniquement une
+                                    palpation de sécurité.</li>
+                            </ul>
+                        </li>
+                        <li>Il est interdit de braquer ou prendre en otage seul en étant en service LSPD/BCSO.</li>
+                    </ul>
+
+                    <h3>👮 Règles spécifiques aux cadets :</h3>
+                    <ul>
+                        <li>Les cadets et officiers doivent respecter le fear RP s'ils sont en infériorité ou en
+                            situation illégale.</li>
+                        <li>Les cadets ne peuvent pas avoir de casier judiciaire.</li>
+                        <li>Les cadets ne peuvent pas partir en patrouille seuls.</li>
+                    </ul>
+
+                    <h3>✅ Prérequis pour l'usage du PIT</h3>
+                    <h4>Conditions nécessaires :</h4>
+                    <ul>
+                        <li>Le véhicule des forces de l'ordre doit être équipé d'un pare-buffle.</li>
+                        <li>Le PIT dépend uniquement du comportement du conducteur poursuivi.</li>
+                    </ul>
+
+                    <h4>🚨 Conditions d'autorisation du PIT :</h4>
+                    <p>Le PIT n'est autorisé que si le conducteur poursuivi adopte une conduite dangereuse, par exemple
+                        :</p>
+                    <ul>
+                        <li>Fonce délibérément dans plusieurs murs ou véhicules,</li>
+                        <li>Ne s'arrête pas malgré un no pain évident (accidents violents ignorés).</li>
+                    </ul>
+                    <p>Dans ce cas, un PIT peut être effectué après au moins 5 minutes de poursuite, si le véhicule
+                        continue à adopter une conduite anarchique (ex. : collisions à 200 km/h, fuite incohérente,
+                        etc.).</p>
+
+                    <h4>❗ Restrictions supplémentaires :</h4>
+                    <p>Si le véhicule poursuivi est :</p>
+                    <ul>
+                        <li>Un véhicule de concessionnaire basique (véhicules civils standards),</li>
+                        <li>Un véhicule de gang,</li>
+                        <li>Une moto, un vélo ou tout véhicule à deux roues,</li>
+                    </ul>
+                    <p>→ Il est strictement interdit de dépasser le véhicule poursuivi.</p>
+                    <p>→ Les agents doivent conserver une distance de sécurité suffisante pour éviter de percuter le
+                        véhicule par maladresse ou par manque de maîtrise.</p>
+
+                    <p>Aucun PIT ne doit être effectué si le conducteur poursuivi :</p>
+                    <ul>
+                        <li>Conduit de manière cohérente,</li>
+                        <li>Respecte le pain RP,</li>
+                        <li>Ne met pas gravement en danger la scène ou les autres.</li>
+                    </ul>
+
+                    <div class="callout success">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <p><strong>PIT Autorisé</strong> (Déstabilisation du véhicule)</p>
+                    </div>
+                    <div class="callout danger">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        <p><strong>PIT non Autorisé</strong> (Auto tamponneuse)</p>
+                    </div>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="reglement-legal">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Règlement RP Légal</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="legal-forces">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Forces de l'ordre →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: FORCES DE L'ORDRE
+             ============================================================ -->
+            <div class="page-section" id="page-legal-forces">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-legal">Règlement RP Légal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Forces de l'ordre</span>
+                </div>
+                <div class="content">
+                    <h1>Règlement des forces de l'ordre</h1>
+                    <p>Les différents niveaux d'intervention pour les descentes LSPD :</p>
+                    <ul>
+                        <li><strong>Intervention Niveau 1 :</strong> prise d'info + carte identité (matraque)</li>
+                        <li><strong>Intervention Niveau 2 :</strong> perquisition</li>
+                        <li><strong>Intervention Niveau 3 :</strong> Arrestation de membre de cet orga/gang</li>
+                        <li><strong>Intervention Niveau 4 :</strong> DISSOLUTION</li>
+                    </ul>
+                    <p>Si les gangs aperçoivent la LSPD en train de se préparer pour faire une descente chez eux, ils
+                        sont obligés de déserter le quartier !</p>
+
+                    <h3>Commandants</h3>
+                    <ul>
+                        <li>Gèrent les liens avec le gouvernement et avec les hauts gradés.</li>
+                        <li>Prennent des directives pour l'organisation de la LSPD.</li>
+                        <li>Organisent et animent les réunions au sein de la LSPD (réunion hebdo LSPD + réunion Major).
+                        </li>
+                        <li>Décident de la création/de la fermeture des services.</li>
+                        <li>Peuvent proposer un vote à l'état major pour consultation de leur avis mais auront toujours
+                            la compétence décisionnaire définitive.</li>
+                        <li>Délèguent partiellement la compétence d'exclusion de la LSPD aux commandants adjoints.</li>
+                        <li>Délèguent partiellement la compétence de mise en garde (avertissements) à l'Etat Major.</li>
+                        <li>Peuvent donner les rôles aux nouveaux cadets.</li>
+                    </ul>
+
+                    <h3>Commandants adjoints</h3>
+                    <ul>
+                        <li>Doivent savoir et réalisent tout ce que font les lieutenants et capitaines.</li>
+                        <li>Peuvent exclure des agents de la LSPD grâce à la délégation de compétence.</li>
+                        <li>Peuvent décider d'un avertissement grâce à la délégation de compétence.</li>
+                        <li>Animent en l'absence ou par décision des commandants les réunions internes et externes.</li>
+                        <li>Accueillent les agents qui font appel de leur décision d'exclusion.</li>
+                        <li>Peuvent donner les rôles aux nouveaux cadets.</li>
+                    </ul>
+
+                    <h3>Capitaines</h3>
+                    <ul>
+                        <li>Coordonnent les démarches RH (ressources humaines) de la LSPD.</li>
+                        <li>S'assurent que les agents ne manquent de rien pour exercer leur métier.</li>
+                        <li>Gèrent l'organisation de l'intranet et de l'administration.</li>
+                        <li>Co-pilotent le recrutement des nouvelles recrues de l'académie.</li>
+                        <li>Proposent des axes d'améliorations de l'institution de par son rôle transversal.</li>
+                        <li>Responsabilisent les agents sur la bonne prise en compte des procédures judiciaires
+                            effectuées (notamment le casier et les plaintes).</li>
+                        <li>Peuvent mettre des avertissements en informant l'état major.</li>
+                        <li>Peuvent décider une mise à pied conservatoire (c'est-à-dire le temps de la discussion avec
+                            les commandants).</li>
+                    </ul>
+
+                    <h3>Lieutenants</h3>
+                    <ul>
+                        <li>Accueillent et pilotent les relations extérieures au département de police (partenariat
+                            entreprises, organisation des cérémonies, des réunions externes, contacter les autres états
+                            majors, faire les annonces concernant les nouveautés, les tutos ou l'entretien des dossiers
+                            gangs orga, etc.).</li>
+                        <li>Doivent savoir faire tout ce que font les lieutenants.</li>
+                        <li>Peuvent mettre des avertissements en informant l'état major.</li>
+                        <li>Peuvent décider une mise à pied conservatoire.</li>
+                        <li>Peuvent donner les rôles aux nouveaux cadets.</li>
+                    </ul>
+
+                    <h3>Sergents</h3>
+                    <ul>
+                        <li>Dirigent un service (NSA ou SWAT), en assument la charge (organisation, développement,
+                            réunions etc.) et en réfèrent aux commandants adjoints et commandants.</li>
+                        <li>Coordonnent des opérations de niveau 1 à 4.</li>
+                        <li>Observent le fonctionnement de l'état major.</li>
+                        <li>Donnent des idées d'amélioration du département de police.</li>
+                        <li>Gèrent les négociations ou désignent un négociateur lors de prise d'otage d'un agent de
+                            l'état, en l'absence ou sous l'ordre d'un plus haut gradé.</li>
+                        <li>Managent les officiers.</li>
+                        <li>S'assurent de l'implication des officiers sur leurs dossiers respectifs.</li>
+                        <li>Réalisent et tiennent à jour des dossiers judiciaires sur les gangs/orga/cartel dont ils ont
+                            la référence.</li>
+                        <li>Forment leurs nouveaux collègues en tâche secondaire.</li>
+                        <li>Conseillent techniquement les agents.</li>
+                        <li>Peuvent être co-référent d'un service avec un Etat Major.</li>
+                    </ul>
+
+                    <h3>Officiers</h3>
+                    <ul>
+                        <li>Sont garants de la formation des cadets.</li>
+                        <li>Responsabilisent les officiers sur leurs missions.</li>
+                        <li>Demandent des dispatchs pour réorganiser les patrouilles.</li>
+                        <li>Prennent la décision en l'absence d'un plus haut gradé de l'orientation d'une intervention.
+                        </li>
+                        <li>Informent l'Etat Major des comportements problématiques d'agents.</li>
+                        <li>Sont responsables de leurs actes et ceux des cadets sur le terrain.</li>
+                        <li>Sont attentifs aux ordres reçus.</li>
+                        <li>Informent les citoyens des règles en vigueur.</li>
+                        <li>Exercent leurs missions de protection dans le respect des règles de la ville.</li>
+                        <li>Interpellent en situation problématique les hauts gradés.</li>
+                        <li>Patrouillent toujours à plusieurs.</li>
+                        <li>Peuvent intégrer des unités (SWAT ou NSA) et/ou spécialisations pilotage (ASD, MUP, UDR).
+                        </li>
+                        <li>Passent leur formation radio-d.</li>
+                        <li>Passent leurs formations initiales (Procédure, Tir, Call Radio, Conduite).</li>
+                        <li>Effectuent leur test psychométrique auprès des psychologues EMS.</li>
+                        <li>Portent leur gilet jaune constamment, sauf sur ordre contraire d'un Etat Major (type OP).
+                        </li>
+                        <li>Ne peuvent patrouiller qu'avec un officier ou plus.</li>
+                        <li>Ne peuvent utiliser d'armes autres que tazer/matraque sauf sur ordre d'un Etat Major.</li>
+                    </ul>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="legal-lspd">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Règlement LSPD/BCSO</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="legal-defcon">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Defcon →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: DEFCON
+             ============================================================ -->
+            <div class="page-section" id="page-legal-defcon">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-legal">Règlement RP Légal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Defcon</span>
+                </div>
+                <div class="content">
+                    <h1>Defcon</h1>
+
+                    <h3>🚨 Defcon 1</h3>
+                    <p>Préparation maximale des forces de l'ordre, uniquement pour une zone en particulier et pendant 48
+                        heures max.</p>
+                    <h4>Consignes</h4>
+                    <p><strong>Forces de l'ordre</strong></p>
+                    <ul>
+                        <li>Toutes les forces de l'ordre sont inopérantes et répondent désormais toutes sur la
+                            dénomination de "Armée".</li>
+                        <li>Les forces de l'ordre n'ont plus le pouvoir d'agir en ville et sont remplacées par l'armée
+                            dans tous les actes et scènes.</li>
+                        <li>Armée déployée sur tout le territoire désigné en DEFCON 1.</li>
+                        <li>Protection prioritaire du Gouvernement.</li>
+                        <li>Mise en place de barrages aux frontières du territoire désigné en DEFCON 1.</li>
+                        <li>Utilisation des véhicules de l'armée uniquement.</li>
+                        <li>Armée sur la radio d'urgence.</li>
+                        <li>Pas d'arrestation, tir immédiat.</li>
+                        <li>Tous les droits de tous les citoyens sont suspendus, dans la limite du raisonnable. (Si abus
+                            constaté par la hiérarchie, sanction sera mise.)</li>
+                    </ul>
+                    <p><strong>Gouvernement</strong></p>
+                    <ul>
+                        <li>Système de défense actif.</li>
+                        <li>Gouvernement sur la radio d'urgence.</li>
+                    </ul>
+
+                    <h3>🚨 Defcon 2</h3>
+                    <p>Accroissement supplémentaire dans la préparation des forces, mais inférieure à la préparation
+                        maximale.</p>
+                    <h4>Consignes</h4>
+                    <p><strong>Forces de l'ordre (Toutes confondues)</strong></p>
+                    <ul>
+                        <li>Mise en place de barrage possible. (Contrôle des papiers, permis de conduire, permis port
+                            d'armes, etc.)</li>
+                        <li>Équipement de combat. (Max 1 sniper par scène)</li>
+                        <li>Véhicules basiques / Véhicules aériens / Véhicules blindés.</li>
+                        <li>Forces de l'ordre à disposition totale du Gouvernement.</li>
+                        <li>Toutes les unités des forces de l'ordre obéissent aux commandants de la LSPD uniquement.
+                        </li>
+                        <li>Aucun mandat obligatoire dans le cadre d'une opération importante.</li>
+                        <li>Pendant un délit de fuite, droit de faire les pneus au bout de 5 min de poursuite. (Un seul
+                            pneu suffit pour déstabiliser la conduite du fuyard.)</li>
+                        <li>Tir létal (Mort de la personne et non mort RP) après 3 sommations orales uniquement en cas
+                            de danger.</li>
+                        <li>Tir immédiat en cas de force majeure.</li>
+                        <li>Possibilité de restreindre la circulation partiellement ou totalement à des endroits précis
+                            et sur ces endroits.</li>
+                    </ul>
+                    <p><strong>Gouvernement</strong></p>
+                    <ul>
+                        <li>Protection en état d'alerte modéré et équipé d'armes lourdes.</li>
+                        <li>Gouvernement sous radio constamment.</li>
+                    </ul>
+
+                    <h3>🚨 Defcon 3</h3>
+                    <p>Accroissement de la préparation des forces au-dessus de la préparation normale.</p>
+                    <h4>Consignes</h4>
+                    <p><strong>Forces de l'ordre (Toutes confondues)</strong></p>
+                    <ul>
+                        <li>Patrouilles intensives. (Vous ne pouvez pas tourner seul en véhicule)</li>
+                        <li>Équipement en fonction des consignes établies par la hiérarchie. (Possible gilet pare-balles
+                            en cas de grosses scènes.)</li>
+                        <li>Fouille possible : Personnes / Véhicules. (non obligatoire, uniquement en cas de suspicion.)
+                        </li>
+                        <li>Véhicules basiques / Véhicules aériens en cas de besoin.</li>
+                        <li>Pendant un délit de fuite, droit de faire les pneus au bout de 5 min de poursuite. (Un seul
+                            pneu suffit pour déstabiliser la conduite du fuyard.)</li>
+                        <li>Tir létal après 3 sommations orales uniquement en cas de danger.</li>
+                        <li>Tir immédiat en cas de force majeure.</li>
+                    </ul>
+                    <p><strong>Gouvernement</strong></p>
+                    <ul>
+                        <li>Fonctionnement normal.</li>
+                        <li>Surveillance supérieure à la normale, utilisation récurrente des renseignements de la I.A.A.
+                        </li>
+                        <li>Protection en état d'alerte normal. (Agent de sécurité obligatoire en cas de déplacement.)
+                        </li>
+                    </ul>
+
+                    <h3>🚨 Defcon 4</h3>
+                    <p>Préparation normale, mais consignes de sécurité.</p>
+                    <h4>Consignes</h4>
+                    <p><strong>Forces de l'ordre (Toutes confondues)</strong></p>
+                    <ul>
+                        <li>Patrouilles normales. (Vous ne pouvez pas tourner seul en véhicule)</li>
+                        <li>Équipement en fonction des consignes établies par la hiérarchie.</li>
+                        <li>Véhicules basiques / Véhicules aériens en cas de besoin.</li>
+                        <li>Pendant un délit de fuite, droit de faire les pneus au bout de 5 min de poursuite. (Un seul
+                            pneu suffit pour déstabiliser la conduite du fuyard.)</li>
+                    </ul>
+                    <p><strong>Gouvernement</strong></p>
+                    <ul>
+                        <li>Fonctionnement normal.</li>
+                        <li>Surveillance supérieure à la normale, utilisation récurrente des renseignements de la I.A.A.
+                        </li>
+                        <li>Protection normale.</li>
+                    </ul>
+
+                    <h3>🚨 Defcon 5</h3>
+                    <p>Préparation normale en temps de paix.</p>
+                    <h4>Consignes</h4>
+                    <p><strong>Forces de l'ordre (Toutes confondues)</strong></p>
+                    <ul>
+                        <li>Patrouilles normales.</li>
+                        <li>Équipement en fonction des consignes établies par la hiérarchie.</li>
+                        <li>Véhicules basiques.</li>
+                    </ul>
+                    <p><strong>Gouvernement</strong></p>
+                    <ul>
+                        <li>Fonctionnement normal.</li>
+                        <li>Surveillance normale.</li>
+                        <li>Protection normale.</li>
+                    </ul>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="legal-forces">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Forces de l'ordre</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="legal-ems">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Règlement EMS →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: EMS
+             ============================================================ -->
+            <div class="page-section" id="page-legal-ems">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-legal">Règlement RP Légal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Règlement EMS</span>
+                </div>
+                <div class="content">
+                    <h1>🚑 Règlement EMS</h1>
+
+                    <div class="callout danger">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        <p><strong>❌ Interdit</strong></p>
+                    </div>
+
+                    <h3>❌ Règles EMS – Ce qui est interdit</h3>
+                    <ul>
+                        <li>Il est strictement interdit d'utiliser le rôle d'EMS à des fins illégales.
+                            <ul>
+                                <li>→ Cela inclut soigner ou réanimer un personnage impliqué dans une scène illégale.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Il est interdit de vendre, échanger ou distribuer des Médikits ou bandages à d'autres
+                            joueurs.</li>
+                        <li>Les EMS ne peuvent pas intervenir sur une scène illégale tant que des tirs sont encore
+                            échangés.
+                            <ul>
+                                <li>→ Vous devez attendre au moins 2 à 3 minutes sans aucun coup de feu, ou 30 secondes
+                                    de calme total après les derniers tirs avant d'intervenir.</li>
+                            </ul>
+                        </li>
+                        <li>Il est interdit de modifier l'esthétique de votre véhicule EMS (couleur, accessoires,
+                            apparence non conforme...).</li>
+                        <li>Un EMS ne peut pas favoriser un groupe ou une organisation en utilisant ses services.
+                            <ul>
+                                <li>→ Exemple : suivre un gang pour les soigner ou les réanimer plus facilement est
+                                    interdit.</li>
+                            </ul>
+                        </li>
+                        <li>Un EMS doit obligatoirement rester à visage découvert :
+                            <ul>
+                                <li>→ Interdiction de porter un masque, un couvre-visage, ou tout autre élément
+                                    dissimulant l'identité.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="callout success">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <p><strong>✅ Autorisé</strong></p>
+                    </div>
+
+                    <h3>🏥 EMS – Règles spécifiques & ATA</h3>
+                    <ul>
+                        <li>Un EMS est autorisé à soigner une personne dans un quartier (zone gang, privé, etc.)
+                            uniquement si une autorisation d'entrée lui a été donnée.</li>
+                        <li>Si un joueur refuse de présenter sa carte d'identité aux EMS, l'hôpital devra faire appel à
+                            un agent LSPD/BCSO pour gérer la situation.</li>
+                        <li>En cas de mort par arme à feu, un ATA (Attente Temps Atténué) de 10 minutes est obligatoire
+                            avant toute reprise d'activité.</li>
+                    </ul>
+
+                    <div class="callout info">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>
+                        <p><strong>🛡️ Autre</strong></p>
+                    </div>
+
+                    <h3>🧑‍⚕️ Règles de service – EMS</h3>
+                    <ul>
+                        <li>Il est obligatoire d'être en tenue réglementaire lorsque vous êtes en service EMS.</li>
+                        <li>Lorsqu'un EMS intervient auprès d'un citoyen, il doit impérativement :
+                            <ul>
+                                <li>Respecter le protocole d'intervention,</li>
+                                <li>S'impliquer pleinement dans le roleplay de la scène.</li>
+                            </ul>
+                        </li>
+                        <li>En fin de service, un EMS est tenu de déposer tous les Médikits et bandages restants dans le
+                            coffre de l'entreprise.</li>
+                    </ul>
+
+                    <h3>🚑 ATA</h3>
+                    <ul>
+                        <li>En cas de mort par arme à feu, un ATA (Attente Temps Atténué) de 10 minutes est obligatoire
+                            avant toute reprise d'activité.</li>
+                        <li>Un ATA est obligatoire, vous ne pouvez pas l'outrepasser ou le négocier.</li>
+                    </ul>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="legal-defcon">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Defcon</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="legal-entreprise">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Règlement Entreprise →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: ENTREPRISE
+             ============================================================ -->
+            <div class="page-section" id="page-legal-entreprise">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-legal">Règlement RP Légal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Règlement Entreprise</span>
+                </div>
+                <div class="content">
+                    <h1>🏛️ Règlement Entreprise</h1>
+
+                    <h3>💼 Général</h3>
+                    <h4>🏢 Règlement Général – Entreprises (Patrons & employés)</h4>
+                    <ul>
+                        <li>Il est formellement interdit aux patrons d'utiliser le coffre de l'entreprise à des fins
+                            personnelles.</li>
+                        <li>Toute entreprise hors boutique ne montrant aucune activité patronale pendant 2 semaines sera
+                            récupérée automatiquement et remise sous dossier.</li>
+                        <li>Il est strictement interdit de vendre ou donner son entreprise.
+                            <ul>
+                                <li>→ Si vous ne souhaitez plus la gérer, vous devez faire un ticket pour qu'elle soit
+                                    reprise dans les règles.</li>
+                            </ul>
+                        </li>
+                        <li>Il est interdit de cumuler plusieurs emplois légaux en même temps.
+                            <ul>
+                                <li>→ En cas d'infraction, vous risquez le renvoi immédiat des deux postes.</li>
+                            </ul>
+                        </li>
+                        <li>Le vol dans le coffre et dans les frigos de l'entreprise est interdit.
+                            <ul>
+                                <li>→ Cela peut entraîner un bannissement ou des TIG, et l'obligation de rembourser
+                                    l'intégralité du préjudice.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>🛠️ Mécano</h3>
+                    <h4>🔧 Règlement Mécano – Modifications & Interventions</h4>
+                    <ul>
+                        <li>Il est strictement interdit d'équiper un véhicule d'une mitrailleuse ou de tout autre
+                            armement.
+                            <ul>
+                                <li>→ (Ces armes sont désactivées par défaut, mais il est essentiel de rester cohérent
+                                    avec le RP.)</li>
+                            </ul>
+                        </li>
+                        <li>Les mécanos ne sont pas autorisés à utiliser leurs permissions pour :
+                            <ul>
+                                <li>Mettre un véhicule en fourrière sans y avoir été expressément autorisés par le
+                                    propriétaire. (sauf si véhicule abandonné)</li>
+                                <li>Déverrouiller un véhicule trouvé dans la rue sans demande claire ou autorisation du
+                                    propriétaire légitime.</li>
+                            </ul>
+                        </li>
+                        <li>Toute utilisation abusive des fonctions mécano à des fins personnelles ou hors-RP peut
+                            entraîner des sanctions.</li>
+                    </ul>
+
+                    <h3>🚗 Concessionnaire</h3>
+                    <h4>🚗 Règlement Concessionnaire – Vente de véhicules</h4>
+                    <ul>
+                        <li>Il est strictement interdit d'attribuer gratuitement un véhicule à un ami ou à qui que ce
+                            soit.
+                            <ul>
+                                <li>→ Toute acquisition de véhicule doit obligatoirement être payée.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>🚗 Règlement Concessionnaire Occasion</h4>
+                    <ul>
+                        <li>Il est désormais INTERDIT de vendre un véhicule à l'aveugle. L'acheteur doit connaître le
+                            contenu du coffre avant l'achat.</li>
+                        <li>Si l'acheteur accepte le véhicule en connaissant son contenu, aucun remboursement ne sera
+                            accordé, peu importe ce qu'il contient.</li>
+                    </ul>
+
+                    <p><strong>🚫 Véhicules interdits à la vente sans autorisation préalable d'un très haut gradé du
+                            staff :</strong></p>
+                    <ul>
+                        <li>Véhicules d'entreprise</li>
+                        <li>Véhicules LSPD</li>
+                        <li>Véhicules BCSO</li>
+                        <li>Véhicules gouvernementaux</li>
+                        <li>Véhicules hospitaliers</li>
+                    </ul>
+                    <p>En cas de non-respect de cette règle, un ban pourra être appliqué au vendeur.</p>
+                    <p>Toute vente de véhicule de fonction à une personne qui ne l'est pas sera sanctionnée d'un ban
+                        permanent !</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="legal-ems">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Règlement EMS</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="legal-activites">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Activités Légales →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: ACTIVITÉS LÉGALES
+             ============================================================ -->
+            <div class="page-section" id="page-legal-activites">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-legal">Règlement RP Légal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Activités Légales</span>
+                </div>
+                <div class="content">
+                    <h1>🎣 Activités Légales</h1>
+
+                    <h3>🐠 Pêche</h3>
+                    <p>Ici vous trouverez toutes les infos sur la pêche !</p>
+
+                    <h3>⚒️ Acier</h3>
+                    <p>Ici vous trouverez toutes les infos pour savoir comment travailler à l'acier.</p>
+
+                    <h4>Comment travailler l'acier ?</h4>
+                    <p>Pour travailler dans l'acier, rendez-vous sur les blips suivants :</p>
+                    <p>Vous avez 3 types de points avec ces blips :</p>
+                    <ul>
+                        <li>Récolte Acier</li>
+                        <li>Traitement Acier</li>
+                        <li>Vente Acier</li>
+                    </ul>
+
+                    <h4>Pour commencer ?</h4>
+                    <p>Vous devez commencer par la récolte, rendez-vous sur un des points de Récolte Acier.</p>
+                    <p>Une fois sur le point, appuyez sur E pour lancer la récolte. (PS : Pensez à prendre un véhicule
+                        avec de la place dans le coffre pour pouvoir prendre votre récolte avec vous)</p>
+
+                    <h4>Traitement de l'acier ?</h4>
+                    <p>Une fois que vous avez récolté un maximum d'acier, rendez-vous sur un des points de Traitement
+                        d'Acier.</p>
+                    <p>Une fois sur le point, appuyez sur E pour lancer le traitement.</p>
+
+                    <h4>Vente de l'acier ?</h4>
+                    <p>Une fois que vous avez traité votre acier, rendez-vous sur un des points de Vente d'Acier.</p>
+                    <p>Une fois sur le point, appuyez sur E pour lancer la vente.</p>
+
+                    <h3>🪵 Scierie</h3>
+                    <p>Ici vous trouverez toutes les infos pour savoir comment travailler à la Scierie.</p>
+
+                    <h4>Comment travailler à la Scierie ?</h4>
+                    <p>Pour travailler dans la Scierie, rendez-vous sur les blips suivants :</p>
+                    <p>Vous avez 3 types de points avec ces blips :</p>
+                    <ul>
+                        <li>Récolte Bois</li>
+                        <li>Traitement Bois</li>
+                        <li>Vente Bois</li>
+                    </ul>
+
+                    <h4>Pour commencer ?</h4>
+                    <p>Vous devez commencer par la récolte, rendez-vous sur un des points de Récolte Bois.</p>
+                    <p>Une fois sur le point, appuyez sur E pour lancer la récolte. (PS : Pensez à prendre un véhicule
+                        avec de la place dans le coffre pour pouvoir prendre votre récolte avec vous)</p>
+
+                    <h4>Traitement du Bois ?</h4>
+                    <p>Une fois que vous avez récolté un maximum de bois, rendez-vous sur un des points de Traitement
+                        Bois.</p>
+                    <p>Une fois sur le point, appuyez sur E pour lancer le traitement.</p>
+
+                    <h4>Vente du Bois ?</h4>
+                    <p>Une fois que vous avez traité votre bois, rendez-vous sur un des points de Vente Bois.</p>
+                    <p>Une fois sur le point, appuyez sur E pour lancer la vente.</p>
+
+                    <h3>🏁 Course</h3>
+                    <p>Participez à des courses de rue pour gagner de l'argent sale et des points de réputation.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="legal-entreprise">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Règlement Entreprise</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="reglement-illegal">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Règlement RP Illégal →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: RÈGLEMENT RP ILLÉGAL (Présentation)
+             ============================================================ -->
+            <div class="page-section" id="page-reglement-illegal">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Règlement RP Illégal</span>
+                </div>
+                <div class="content">
+                    <h1>Règlement RP Illégal</h1>
+                    <p>Le règlement RP Illégal encadre les activités illégales du serveur.</p>
+
+                    <div class="callout info">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>
+                        <p>Utilisez le menu latéral pour naviguer entre les sous-catégories : Drogues, Braquage Pacific,
+                            Bijouterie, Supérette, Carjack, Fourgon et Cambriolage.</p>
+                    </div>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="legal-activites">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Activités Légales</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="illegal-drogues">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Drogues →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: DROGUES
+             ============================================================ -->
+            <div class="page-section" id="page-illegal-drogues">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-illegal">Règlement RP Illégal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Drogues</span>
+                </div>
+                <div class="content">
+                    <h1>💊 Drogues</h1>
+                    <p>Ici vous trouverez toutes les infos sur les points de drogues ainsi que des points de ventes !
+                    </p>
+
+                    <p>La drogue fait partie intégrante du serveur au niveau de l'illégal, il est important de détenir
+                        une zone de vente (il vous suffit de vendre de la drogue pour pouvoir posséder une zone), pour
+                        acheter dans le shop illégal, des armes, et autres attributs attenant à l'illégal.</p>
+
+                    <p>Les armes achetées dans le shop illégal peuvent ensuite être revendues aux autres groupes
+                        présents en ville.</p>
+
+                    <p>Certaines zones de ventes sont réservées uniquement à des gangs ou des organisations, à vous de
+                        ne pas vous tromper.</p>
+
+                    <p>Chaque drogue peut être revendue à n'importe quel point de vente du moment que cela en est un.
+                    </p>
+
+                    <p>Vous pouvez accéder à la liste des territoires en appuyant sur F7 lorsque vous faites partie d'un
+                        groupe.</p>
+
+                    <p>Ceci vous sert alors à avoir les informations sur qui "revendique" une zone et également à
+                        combien de points vous êtes pour rattraper les nombres de points de ventes des autres si vous
+                        vendez également sur la zone en question.</p>
+
+                    <p>Lors de votre vente de drogue, des points vous sont attribués pour votre groupe ainsi que de
+                        l'argent sale qui va directement dans vos poches. Si vous possédez une zone de vente, chaque
+                        chose que vous achetez dans le shop illégal vous coûtera alors des points de zones ainsi que de
+                        l'argent sale. Par exemple un kevlar vous coûtera alors 80 000$ en argent sale ainsi que 50
+                        points de zone.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="reglement-illegal">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Règlement RP Illégal</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="illegal-pacific">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Braquage Pacific →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: BRAQUAGE PACIFIC
+             ============================================================ -->
+            <div class="page-section" id="page-illegal-pacific">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-illegal">Règlement RP Illégal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Braquage Pacific</span>
+                </div>
+                <div class="content">
+                    <h1>💵 Braquage de banque Pacific</h1>
+
+                    <p>Ce braquage est uniquement disponible sous GDOC au préalable. Sans GDOC, vous ne pourrez pas
+                        faire le braquage.</p>
+
+                    <p>Pour l'ensemble des braquages, vous devez attendre quelques heures (généralement 3 à 5 heures)
+                        après qu'un autre joueur ait braqué. Ceci permet de ne pas créer un spam de braquages dans le
+                        serveur.</p>
+
+                    <p>Pour braquer la Pacific, il te faut te rendre au LTD ainsi que dans une zone de contre territoire
+                        pour y acheter ce qui va te servir à atteindre le butin du coffre.</p>
+
+                    <p><strong>Liste d'items à prévoir pour le braquage :</strong></p>
+                    <ul>
+                        <li>Thermite x21. (Item trouvable dans les zones de territoire)</li>
+                        <li>Perceuses x34. (Item trouvable dans les LTD)</li>
+                        <li>1 Ordinateur Portable (Item trouvable dans les LTD)</li>
+                    </ul>
+
+                    <p>Une fois le braquage réussi, reste une étape que toi et ton équipe allez devoir gérer : la police
+                        qui va se mettre à votre poursuite. Une fois les flics semés, il te faudra te cacher dans un
+                        endroit sûr et laisser la tension redescendre le temps que tout se calme pour ensuite pouvoir
+                        bouger de nouveau.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="illegal-drogues">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Drogues</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="illegal-bijouterie">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Braquage Bijouterie →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: BRAQUAGE BIJOUTERIE
+             ============================================================ -->
+            <div class="page-section" id="page-illegal-bijouterie">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-illegal">Règlement RP Illégal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Braquage Bijouterie</span>
+                </div>
+                <div class="content">
+                    <h1>💎 Braquage de Bijouterie</h1>
+
+                    <p>Cette bijouterie rapporte maximum 5 millions de $ en argent sale. Bien entendu vous devez réussir
+                        toutes les étapes de celle-ci pour obtenir le gain maximal.</p>
+
+                    <p>Pour l'ensemble des braquages, vous devez attendre quelques heures (généralement 3 à 5 heures)
+                        après qu'un autre joueur ait braqué. Ceci permet de ne pas créer un spam de braquages dans le
+                        serveur.</p>
+
+                    <p>Pour braquer la bijouterie, il te faut te rendre au shop illégal pour y acheter ce qui va te
+                        servir à atteindre le butin du coffre.</p>
+
+                    <p><strong>Liste d'items à prévoir pour le braquage :</strong></p>
+                    <ul>
+                        <li>Thermite x3. (Item trouvable dans les zones de territoire)</li>
+                        <li>Découpeuse de vitres x2. (Item trouvable dans les LTD)</li>
+                        <li>4 Perceuses. (Item trouvable dans les LTD)</li>
+                    </ul>
+
+                    <p>Une fois le braquage réussi, reste une étape que toi et ton équipe allez devoir gérer : la police
+                        qui va se mettre à votre poursuite. Une fois les flics semés, il te faudra te cacher dans un
+                        endroit sûr et laisser la tension redescendre le temps que tout se calme pour ensuite pouvoir
+                        bouger de nouveau.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="illegal-pacific">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Braquage Pacific</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="illegal-superette">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Braquages supérette →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: BRAQUAGES SUPÉRETTE
+             ============================================================ -->
+            <div class="page-section" id="page-illegal-superette">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-illegal">Règlement RP Illégal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Braquages supérette</span>
+                </div>
+                <div class="content">
+                    <h1>🛒 Braquages de supérette</h1>
+
+                    <p>Chaque supérette peut être braquée toutes les 60 minutes.</p>
+
+                    <p>Rendez-vous dans une supérette avec une arme en main et visez "Apu".</p>
+
+                    <p>Une fois votre jauge de "menace" à fond, Apu vous donnera le contenu de la caisse.</p>
+
+                    <p>Ramassez le sac avec la touche "E", l'argent vous sera directement donné.</p>
+
+                    <p>Vous recevrez l'argent directement dans vos poches en argent sale ! Enfin, il ne vous reste plus
+                        qu'à partir avant que les flics ne rappliquent !</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="illegal-bijouterie">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Braquage Bijouterie</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="illegal-carjack">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Carjack →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: CARJACK
+             ============================================================ -->
+            <div class="page-section" id="page-illegal-carjack">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-illegal">Règlement RP Illégal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Carjack</span>
+                </div>
+                <div class="content">
+                    <h1>🚙 Carjack de véhicule</h1>
+
+                    <p>Une activité à faire une fois par jour et qui te fera gagner de l'argent sale.</p>
+
+                    <p>Pour faire cette activité, il vous faut vous rendre au PNJ qui délivre les missions de Carjack.
+                    </p>
+
+                    <p>Une fois arrivé, parle au PNJ en appuyant sur "E", un point GPS sera ajouté sur ta MAP, rends-y
+                        toi le plus rapidement possible le temps est compté.</p>
+
+                    <p>Ensuite, va chercher la voiture, sans oublier qu'un compteur tourne derrière ! Prends la voiture
+                        et livre la.</p>
+
+                    <p>Une fois livré, tu recevras une somme d'argent aléatoire en argent sale.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="illegal-superette">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Braquages supérette</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="illegal-fourgon">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Braquage Fourgon →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: BRAQUAGE FOURGON
+             ============================================================ -->
+            <div class="page-section" id="page-illegal-fourgon">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-illegal">Règlement RP Illégal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Braquage Fourgon</span>
+                </div>
+                <div class="content">
+                    <h1>🚚 Braquage de Fourgon</h1>
+
+                    <p>Les braquages de fourgon sont une activité lancée aléatoirement par le serveur. Pour y participer
+                        c'est très simple, rendez-vous à l'endroit indiqué sur la map lorsque vous avez l'alerte.</p>
+
+                    <p>La LSPD est également avertie au bout de 30 secondes, attention ils ont le droit de vous arrêter
+                        pour "braquage de fourgon".</p>
+
+                    <p>Une fois sur zone, cassez le fourgon, soit en tapant dessus ou en tirant dessus.</p>
+
+                    <p>Une fois cassé, tu peux récupérer les sacs de billets. L'argent gagné est de l'argent "sale".</p>
+
+                    <p>Le but n'est pas de tuer les joueurs qui viennent sur l'évènement mais de détruire le véhicule
+                        pour y récupérer le contenu.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="illegal-carjack">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Carjack</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="illegal-cambriolage">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Cambriolage →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: CAMBRIOLAGE
+             ============================================================ -->
+            <div class="page-section" id="page-illegal-cambriolage">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <a href="#" data-page="reglement-illegal">Règlement RP Illégal</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Cambriolage</span>
+                </div>
+                <div class="content">
+                    <h1>🏠 Cambriolage</h1>
+
+                    <p>Chaque joueur peut réaliser un cambriolage par jour, le reboot du serveur est tous les jours à
+                        15h.</p>
+
+                    <p><strong>Pour réaliser un cambriolage il te faut :</strong></p>
+                    <ul>
+                        <li>1 Lockpick.</li>
+                        <li>1 Tournevis au LTD.</li>
+                    </ul>
+
+                    <p><strong>Comment reconnaître une maison qui possède le script cambriolage ?</strong></p>
+                    <p>Les maisons cambriolables sont désignées sur la map par une petite maison rouge.</p>
+
+                    <p>Devant les portes de celles-ci, vous aurez un point pour commencer le cambriolage.</p>
+
+                    <p>Une fois rentré dans la maison, il te faudra faire attention ! Le bruit que tu vas faire peut
+                        réveiller un PNJ, et si tu le réveilles, il se peut que tu prennes un coup de fusil et qu'il
+                        appelle la police.</p>
+
+                    <p>Une étape également importante lors du cambriolage et si tu as de la chance : le "coffre-fort"
+                        spawn 1 fois sur 2 lors d'un cambriolage et peut te rapporter beaucoup d'argent en argent sale.
+                    </p>
+
+                    <p>Prochaine étape pour toi, le temps est compté avant que les flics arrivent ! Vole tout ce que tu
+                        peux voler et va le mettre dans le coffre de ton véhicule.</p>
+
+                    <p>N'oublie pas de rapprocher au max ton véhicule de la porte de la maison (pour ranger les items
+                        dans ton véhicule, rapproche toi de celui-ci puis un message s'affichera pour te proposer de
+                        ranger les items dans le coffre de ton véhicule.)</p>
+
+                    <p>Une fois que tu as mis un item dans ton coffre, tu peux à nouveau rentrer dans la maison pour y
+                        voler d'autres items.</p>
+
+                    <p>Enfin, il ne te reste plus qu'à aller vendre les items au point sur le screen ci-dessus !</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="illegal-fourgon">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Braquage Fourgon</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="guide-connect">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Se Connecter →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: SE CONNECTER
+             ============================================================ -->
+            <div class="page-section" id="page-guide-connect">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Se Connecter</span>
+                </div>
+                <div class="content">
+                    <h1>Se Connecter</h1>
+                    <p>Pour rejoindre notre serveur voici des méthodes simples.</p>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>Première Méthode</h2>
+                    <ol>
+                        <li>Cliquez sur Jouer.</li>
+                        <li>Puis recherchez BACKNEW dans la liste des serveurs FiveM.</li>
+                        <li>Puis cliquez sur BACKNEW RP.</li>
+                        <li>Enfin, cliquez sur Se Connecter.</li>
+                    </ol>
+
+                    <h2><svg class="svg-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>Deuxième Méthode</h2>
+                    <p>Appuyez sur F8 dans le menu FiveM et collez :</p>
+                    <ul>
+                        <li><code>connect cfx.re/join/oaxvlax</code></li>
+                    </ul>
+                    <p>Appuyez sur ENTRÉE et c'est tout !</p>
+
+                    <p>Si vous n'arrivez pas à vous connecter, cela peut venir aussi de FiveM, vous pouvez vérifier
+                        vous-même si FiveM a un souci sur ses serveurs via Cfx.Re.</p>
+                    <p>Bon jeu et amusez-vous bien sur BACKNEW.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="illegal-cambriolage">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Cambriolage</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="boutique">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Boutique →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: BOUTIQUE
+             ============================================================ -->
+            <div class="page-section" id="page-boutique">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Boutique</span>
+                </div>
+                <div class="content">
+                    <h1>🛒 Boutique</h1>
+                    <p>Retrouvez toutes les informations sur la boutique BACKNEW.</p>
+
+                    <h2>🛒 Comment acheter des coins ?</h2>
+                    <p>Rendez-vous sur la boutique en ligne, créez un compte et choisissez le pack de coins qui vous
+                        convient.</p>
+
+                    <h2>🛒 Infos VIP</h2>
+                    <p>Le statut VIP vous donne accès à des avantages exclusifs : véhicules exclusifs, appartements
+                        premium, priorité de connexion, badge VIP sur Discord.</p>
+
+                    <h2>🛒 Historique d'achat</h2>
+                    <p>Vous pouvez consulter l'historique de vos achats sur la boutique en ligne (Tebex).</p>
+
+                    <h2>🛒 Remboursement</h2>
+                    <p>Les remboursements sont possibles dans les 14 jours suivant l'achat, sous conditions.</p>
+
+                    <h2>🛒 VIP non reçu</h2>
+                    <p>Si vous n'avez pas reçu votre VIP après un achat, ouvrez un ticket sur Discord avec votre preuve
+                        d'achat.</p>
+
+                    <h2>🛒 Coins non reçu</h2>
+                    <p>Si vos coins ne sont pas crédités, vérifiez votre historique d'achat. Si le problème persiste,
+                        ouvrez un ticket.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="guide-connect">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Se Connecter</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="guide">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Guide →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: GUIDE
+             ============================================================ -->
+            <div class="page-section" id="page-guide">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Guide</span>
+                </div>
+                <div class="content">
+                    <h1>Guide BACKNEW</h1>
+                    <p>Bienvenue dans le guide officiel de BACKNEW. Vous trouverez ici toutes les informations
+                        nécessaires.</p>
+
+                    <h2>Commandes de base</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Commande</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>/help</code></td>
+                                <td>Affiche l'aide en jeu.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/report</code></td>
+                                <td>Signale un problème à un admin.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/me</code></td>
+                                <td>Décrit une action de votre personnage.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/do</code></td>
+                                <td>Décrit l'environnement ou une action.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/try</code></td>
+                                <td>Tente une action avec une chance de réussite.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Personnalisation</h2>
+                    <ul>
+                        <li>Modifier votre HUD (affichage des informations).</li>
+                        <li>Configurer vos touches (menu Paramètres).</li>
+                        <li>Créer votre carte d'identité et votre permis de conduire.</li>
+                    </ul>
+
+                    <h2>Trouver un emploi</h2>
+                    <ul>
+                        <li>Policier (LSPD / BCSO)</li>
+                        <li>EMS</li>
+                        <li>Mécanicien</li>
+                        <li>Chauffeur de taxi</li>
+                        <li>Pêcheur</li>
+                        <li>Bûcheron</li>
+                    </ul>
+
+                    <h2>Faire un report</h2>
+                    <p>Pour signaler un joueur ou un bug, utilisez la commande /report en jeu. Un admin prendra en
+                        charge votre demande.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="boutique">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Boutique</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="restaurants">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Restaurants →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: RESTAURANTS
+             ============================================================ -->
+            <div class="page-section" id="page-restaurants">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Restaurants</span>
+                </div>
+                <div class="content">
+                    <h1>Restaurants</h1>
+                    <p>Découvrez les restaurants de BACKNEW et leurs spécialités.</p>
+
+                    <h2>Café UwU</h2>
+                    <p>Un café cosy avec une ambiance kawaii. Parfait pour une pause détente.</p>
+
+                    <h2>Burger Shot</h2>
+                    <p>Le fast-food incontournable de la ville. Burgers, frites et sodas à volonté.</p>
+
+                    <h2>Drusillas</h2>
+                    <p>Un restaurant familial proposant des plats variés et savoureux.</p>
+
+                    <h2>Kebab</h2>
+                    <p>Le meilleur kebab de la ville, ouvert tard le soir.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="guide">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Guide</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="bugs">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Soucis / Bugs →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: SOUCIS / BUGS
+             ============================================================ -->
+            <div class="page-section" id="page-bugs">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Soucis / Bugs</span>
+                </div>
+                <div class="content">
+                    <h1>Soucis / Bugs</h1>
+                    <p>Vous rencontrez un problème technique ? Consultez les solutions ci-dessous avant d'ouvrir un
+                        ticket.</p>
+
+                    <h2>Fix FiveM Guide</h2>
+                    <p>Si FiveM ne se lance pas, vérifiez que votre jeu est à jour et que vos pilotes graphiques sont
+                        installés.</p>
+
+                    <h2>Vider son cache FiveM</h2>
+                    <ol>
+                        <li>Fermez FiveM.</li>
+                        <li>Appuyez sur Windows + R.</li>
+                        <li>Tapez %localappdata%\FiveM\FiveM.app\cache et supprimez le contenu.</li>
+                        <li>Relancez FiveM.</li>
+                    </ol>
+
+                    <h2>Vérifier ses fichiers GTA</h2>
+                    <p>Sur Steam : Clic droit sur GTA V > Propriétés > Fichiers locaux > Vérifier l'intégrité des
+                        fichiers.</p>
+
+                    <h2>Bug Spawn Véhicule</h2>
+                    <p>Si votre véhicule ne spawn pas, essayez de vous déplacer et de réessayer. Si le problème
+                        persiste, ouvrez un ticket.</p>
+
+                    <h2>Bug Menu en jeu</h2>
+                    <p>Si le menu ne s'ouvre pas, vérifiez vos touches dans les paramètres.</p>
+
+                    <h2>Bug Map ne charge pas</h2>
+                    <p>Si la map ne charge pas, videz votre cache et vérifiez vos fichiers GTA.</p>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="restaurants">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Restaurants</span>
+                        </a>
+                        <a href="#" class="page-nav-link next" data-page="changelog">
+                            <span class="page-nav-label">Suivant</span>
+                            <span class="page-nav-title">Changelog →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================
+             PAGE: CHANGELOG
+             ============================================================ -->
+            <div class="page-section" id="page-changelog">
+                <div class="breadcrumb">
+                    <a href="#" data-page="home">Règlement BACKNEW</a>
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    <span>Changelog</span>
+                </div>
+                <div class="content">
+                    <h1>Changelog</h1>
+                    <p>Retrouvez ici les dernières mises à jour du serveur et du règlement.</p>
+
+                    <h2>Version 1.2.0 — 15 Octobre 2026</h2>
+                    <ul>
+                        <li>Ajout du règlement sur les îles.</li>
+                        <li>Mise à jour des limites d'effectifs des entreprises.</li>
+                        <li>Correction de bugs mineurs.</li>
+                    </ul>
+
+                    <h2>Version 1.1.0 — 1 Septembre 2026</h2>
+                    <ul>
+                        <li>Ajout du guide en jeu.</li>
+                        <li>Mise à jour du règlement HRP.</li>
+                        <li>Ajout des restaurants.</li>
+                    </ul>
+
+                    <h2>Version 1.0.0 — 1 Juillet 2026</h2>
+                    <ul>
+                        <li>Lancement officiel du serveur BACKNEW.</li>
+                        <li>Publication du règlement initial.</li>
+                    </ul>
+
+                    <div class="page-nav">
+                        <a href="#" class="page-nav-link prev" data-page="bugs">
+                            <span class="page-nav-label">Précédent</span>
+                            <span class="page-nav-title">← Soucis / Bugs</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        © 2026 BACKNEW — Tous droits réservés.
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
